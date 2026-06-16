@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Town Cleanup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-panel" aria-label="Eco Town Cleanup game">
+      <div class="top-bar">
+        <div>
+          <p class="eyebrow">Eco Town Cleanup</p>
+          <h1>Sort the town's litter into the right bins.</h1>
+        </div>
+        <button id="restartButton" type="button">Restart</button>
+      </div>
+
+      <div class="hud" aria-live="polite">
+        <div>
+          <span>Score</span>
+          <strong id="scoreText">0</strong>
+        </div>
+        <div>
+          <span>Time</span>
+          <strong id="timeText">90</strong>
+        </div>
+        <div>
+          <span>Carrying</span>
+          <strong id="inventoryText">Nothing</strong>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="960" height="600" aria-label="Top-down recycling game"></canvas>
+
+      <div class="touch-controls" aria-label="Touch movement controls">
+        <button type="button" data-key="arrowup" aria-label="Move up">&uarr;</button>
+        <button type="button" data-key="arrowleft" aria-label="Move left">&larr;</button>
+        <button type="button" data-key="arrowdown" aria-label="Move down">&darr;</button>
+        <button type="button" data-key="arrowright" aria-label="Move right">&rarr;</button>
+      </div>
+
+      <div class="message-row">
+        <p id="messageText">Use WASD or arrow keys to move. Pick up litter, then visit the matching bin.</p>
+      </div>
+    </section>
+
+    <aside class="guide-panel" aria-label="Recycling guide">
+      <h2>Recycling Guide</h2>
+      <ul id="guideList"></ul>
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Town cleaned</span>
+          <strong id="progressText">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
