@@ -1,1 +1,1 @@
-#This is a prototype version.
+#This is a prototype version only.
